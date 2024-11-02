@@ -1,12 +1,12 @@
 import React, { useState, useContext } from 'react';
 import { useNavigate, useLocation } from 'react-router-dom';
-import axios from 'axios';
+// import axios from 'axios';
 import './AuthPage.css';
 import logo from '../assets/images/Logo.png';
 import { UserContext } from '../UserContext'; 
 import api from '../config/axios';
 
-const API_BASE_URL = 'http://localhost:5000';
+// const API_BASE_URL = 'http://localhost:5000';
 
 const AuthPage = () => {
   const { setUser } = useContext(UserContext); 
@@ -32,7 +32,8 @@ const AuthPage = () => {
     setIsLoading(true);
 
     try {
-      const endpoint = isSignUp ? `${API_BASE_URL}/api/auth/signup` : `${API_BASE_URL}/api/auth/login`;
+      // Remove API_BASE_URL and use the endpoint directly since baseURL is configured in api instance
+      const endpoint = isSignUp ? '/api/auth/signup' : '/api/auth/login';
       const response = await api.post(endpoint, {
         email,
         password,
@@ -42,6 +43,18 @@ const AuthPage = () => {
         degree: isSignUp ? degree : undefined,
         department: isSignUp ? department : undefined,
       });
+
+    // try {
+    //   const endpoint = isSignUp ? `${API_BASE_URL}/api/auth/signup` : `${API_BASE_URL}/api/auth/login`;
+    //   const response = await api.post(endpoint, {
+    //     email,
+    //     password,
+    //     role,
+    //     name: isSignUp ? name : undefined,
+    //     additionalInfo: isSignUp ? additionalInfo : undefined,
+    //     degree: isSignUp ? degree : undefined,
+    //     department: isSignUp ? department : undefined,
+    //   });
 
       // Set user data in context after successful login/signup
       const userData = {
