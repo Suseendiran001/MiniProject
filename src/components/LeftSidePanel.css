@@ -1,0 +1,44 @@
+/* LeftSidePanel.css */
+
+.left-side-panel {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 60px;
+    height: 100%;
+    background: white;
+    box-shadow: 0 4px 8px rgba(18, 47, 96, 0.5);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 20px;
+    z-index: 1000;
+    border-right: 1px solid #ddd;
+  }
+  
+  .logo-container {
+    margin-bottom: auto;
+  }
+  
+  .panel-logo {
+    width: 80px;
+    height: 80px;
+  }
+  
+  .bottom-container {
+    margin-top: auto;
+    padding-bottom: 20px;
+  }
+  
+  .settings-icon {
+    width: 30px;
+    height: 30px;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+    filter: invert(12%) sepia(45%) saturate(1568%) hue-rotate(186deg) brightness(93%) contrast(98%);
+  }
+  
+  .settings-icon:hover {
+    transform: scale(1.1);
+  }
+  

@@ -1,0 +1,218 @@
+/* HomePage.css */
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.home-page-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.navbar {
+    background-color: white;
+    color: #023f57;
+    padding: 5px 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    flex-shrink: 0;
+    width: 100%;
+}
+
+.navbar-brand {
+    display: flex;
+    align-items: center;
+    font-size: 40px;
+    font-family: 'Pacifico', 'Arial', sans-serif;
+}
+
+.navbar-logo {
+    width: 80px;
+    height: auto;
+    margin-right: 10px;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes gradientFlow {
+    0% {
+        background-position: 0% 50%;
+    }
+
+    50% {
+        background-position: 100% 50%;
+    }
+
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.05);
+    }
+
+    100% {
+        transform: scale(1);
+    }
+}
+
+.welcome {
+    background: linear-gradient(100deg, #02629f, #e5e5e6, #02629f);
+    background-size: 200% 200%;
+    animation: gradientFlow 10s ease infinite;
+    border-radius: 30px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.35);
+    width: 50%;
+    margin: 50px 10px;
+    padding: 30px 20px;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.welcome::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: radial-gradient(circle, rgba(255, 255, 255, 0.3) 0%, rgba(255, 255, 255, 0) 70%);
+    transform: rotate(45deg);
+    animation: shine 5s linear infinite;
+}
+
+@keyframes shine {
+    from {
+        transform: rotate(45deg) translateY(-100%);
+    }
+
+    to {
+        transform: rotate(45deg) translateY(100%);
+    }
+}
+
+.welcome h1 {
+    font-size: 2em;
+    margin-bottom: 20px;
+    color: white;
+    animation: fadeIn 1s ease-out, pulse 2s ease-in-out infinite;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.welcome p {
+    font-size: 17px;
+    font-weight: 700;
+    color: rgb(3, 44, 94);
+    margin-bottom: 20px;
+    animation: fadeIn 1s ease-out 0.5s backwards;
+    opacity: 0;
+    animation-fill-mode: forwards;
+}
+
+.buttons-container {
+    display: flex;
+    justify-content: space-evenly;
+    gap: 30px;
+    animation: fadeIn 1s ease-out 1s backwards;
+}
+
+.role-button {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    cursor: pointer;
+}
+
+.teacher-icon {
+    font-size: 50px;
+    color: #09a58b;
+    margin-bottom: 15px;
+}
+
+.student-icon {
+    font-size: 50px;
+    color: #0f92e4;
+    margin-bottom: 15px;
+}
+
+.alumni-icon {
+    font-size: 50px;
+    color: #8606b3;
+    margin-bottom: 15px;
+}
+
+.buttons-container button {
+    color: white;
+    font-size: 15px;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+    border-radius: 10px;
+    border: 2px solid transparent;
+    transition: all 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    padding: 15px 30px;
+}
+
+.Tbutton {
+    background-color: #09a58b;
+}
+
+.Tbutton:hover {
+    background-color: white;
+    color: #09917a;
+    border: 2px solid #09917a;
+    transform: translateY(-2px) scale(1.05);
+    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
+}
+
+.Sbutton {
+    background-color: #0f92e4;
+}
+
+.Sbutton:hover {
+    background-color: white;
+    color: #0f92e4;
+    border: 2px solid #0f92e4;
+    transform: translateY(-2px) scale(1.05);
+    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
+}
+
+.Abutton {
+    background-color: #8606b3;
+}
+
+.Abutton:hover {
+    background-color: white;
+    color: #8606b3;
+    border: 2px solid #8606b3;
+    transform: translateY(-2px) scale(1.05);
+    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
+}

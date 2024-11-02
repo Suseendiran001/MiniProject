@@ -1,0 +1,267 @@
+/* ToDoListPage.css */
+.todo-list-page {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 30px;
+  box-sizing: border-box;
+  font-family: 'Inter', sans-serif;
+  color: black;
+  margin-left: 70px; 
+  margin-right: 70px;
+}
+
+header {
+  width: 100%;
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+header h1 {
+  font-size: 3rem;
+  color: #033f6c;
+  margin-bottom: 10px;
+  font-weight: 700;
+}
+
+.search-bar input {
+  width: 100%;
+  max-width: 400px;
+  padding: 12px;
+  border-radius: 12px;
+  border: 1px solid #ddd;
+  font-size: 1rem;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  transition: box-shadow 0.3s ease;
+}
+
+.search-bar input:focus {
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.15);
+  outline: none;
+}
+
+.task-input-section {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+  justify-content: center;
+  margin-bottom: 30px;
+  width: 100%;
+}
+
+.task-input {
+  flex: 2;
+  padding: 14px;
+  border-radius: 12px;
+  border: 1px solid #ddd;
+  font-size: 1rem;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  transition: box-shadow 0.3s ease;
+}
+
+.task-input:focus {
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.15);
+  outline: none;
+}
+
+select, .due-date-input {
+  flex: 1;
+  padding: 14px;
+  border-radius: 12px;
+  border: 1px solid #ddd;
+  font-size: 1rem;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  transition: box-shadow 0.3s ease;
+}
+
+select:focus, .due-date-input:focus {
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.15);
+  outline: none;
+}
+
+.add-task-button {
+  padding: 12px 24px;
+  background: linear-gradient(135deg, #1c9839, #0d7824);
+  color: white;
+  border: none;
+  border-radius: 12px;
+  font-size: 1.1rem;
+  cursor: pointer;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  transition: box-shadow 0.3s ease, transform 0.3s ease;
+}
+
+.add-task-button:hover {
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.2);
+  transform: translateY(-2px);
+}
+
+.tasks-list {
+  width: calc(100% - 140px);
+  max-width: 1000px;
+  list-style: none;
+  padding: 0;
+  margin: 0 auto;
+}
+
+.task-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  background-color: white;
+  border-radius: 12px;
+  margin-bottom: 15px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.task-item:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.15);
+}
+
+.task-details {
+  display: flex;
+  gap: 25px;
+  align-items: center;
+}
+
+.task-text {
+  font-size: 1.3rem;
+  font-weight: 500;
+}
+
+.task-category, .task-priority, .task-due-date {
+  font-size: 1rem;
+  color: #555;
+}
+
+.task-text.low {
+  color: #28a745;
+}
+
+.task-text.medium {
+  color: #ffc107;
+}
+
+.task-text.high {
+  color: #dc3545;
+}
+
+.remove-task-button {
+  padding: 8px 14px;
+  background: linear-gradient(135deg, #bc0f20, #970d1a);
+  color: white;
+  border: none;
+  border-radius: 12px;
+  font-size: 1rem;
+  cursor: pointer;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  transition: box-shadow 0.3s ease, transform 0.3s ease;
+}
+
+.remove-task-button:hover {
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.2);
+  transform: translateY(-2px);
+}
+
+/* Custom checkbox styles */
+.task-details input[type="checkbox"] {
+  appearance: none;
+  width: 20px;
+  height: 20px;
+  border: 2px solid #345ea8;
+  border-radius: 4px;
+  outline: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease, border-color 0.3s ease;
+  position: relative;
+}
+
+.task-details input[type="checkbox"]:checked {
+  background-color: #345ea8;
+  border-color: #345ea8;
+}
+
+.task-details input[type="checkbox"]:checked::before {
+  content: '✔';
+  color: white;
+  font-size: 14px;
+  position: absolute;
+  top: 0;
+  left: 3px;
+  line-height: 18px;
+}
+
+.task-details input[type="checkbox"]:hover {
+  border-color: #1d3f72;
+}
+
+.task-details input[type="checkbox"]:checked:hover {
+  background-color: #1d3f72;
+  border-color: #1d3f72;
+}
+
+/* Style for completed tasks */
+.task-item.completed {
+  background-color: #f0f8ff;
+  border-left: 4px solid #28a745;
+  color: #888;
+  text-decoration: line-through;
+  opacity: 0.7;
+  transition: background-color 0.3s ease, opacity 0.3s ease;
+}
+
+.task-item.completed .task-text {
+  color: #6c757d;
+}
+
+.task-item.completed:hover {
+  background-color: #e0f0ff;
+  opacity: 1;
+}
+
+.task-item.completed .remove-task-button {
+  background: linear-gradient(135deg, #6c757d, #495057);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.task-item.completed .remove-task-button:hover {
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.2);
+  transform: translateY(-2px);
+}
+
+/* Deadline notification */
+
+.deadline-notification {
+  background-color: #fff;
+  border-left: 4px solid #ff4d4f;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+  padding: 16px;
+  margin: 8px;
+  border-radius: 4px;
+  max-width: 300px;
+}
+
+.deadline-notification h4 {
+  margin: 0 0 8px 0;
+  color: #ff4d4f;
+}
+
+.deadline-notification p {
+  margin: 4px 0;
+  color: #666;
+}
+
+.task-due-date {
+  font-size: 0.9em;
+  color: #666;
+  margin-left: 12px;
+}
+
+/* Style overdue tasks */
+.task-item.overdue .task-due-date {
+  color: #ff4d4f;
+  font-weight: bold;
+}

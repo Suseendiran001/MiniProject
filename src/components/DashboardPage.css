@@ -1,0 +1,234 @@
+/* DashboardPage.css */
+
+@import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
+
+body {
+    margin: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.dashboard {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.navbar {
+    background-color: white;
+    color: #023f57;
+    padding: 5px 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    flex-shrink: 0;
+    width: 100%;
+}
+
+.navbar-brand {
+    display: flex;
+    align-items: center;
+    font-size: 40px;
+    font-family: 'Pacifico', 'Arial', sans-serif;
+}
+
+.navbar-logo {
+    width: 80px;
+    height: auto; 
+    margin-right: 10px;
+}
+
+.navbar-right {
+    display: flex;
+    align-items: center;
+}
+
+.profile-button {
+    width: 40px;
+    height: 40px;
+    margin-right: 10px;
+    background: none; 
+    border: none;     
+    padding: 0;       
+}
+
+.profile-icon {
+    width: 100%;
+    height: 100%;
+}
+
+.navbar-toggle {
+    width: 40px;
+    height: 40px;
+    margin-left: 10px;
+    background: none;
+    border: none;
+    padding: 0;
+}
+
+.navbar-toggle img {
+    width: 100%;
+    height: 100%;
+    display: block;
+}
+
+.dashboard-content {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    transition: margin-right 0.3s ease;
+    padding: 30px;
+    box-sizing: border-box;
+    margin-right: 0;
+    overflow-y: auto;
+}
+
+.sidebar {
+    width: 350px;
+    height: 100vh;
+    background:#122f60;
+    color: #ffffff;
+    padding: 20px;
+    box-shadow: -4px 0 6px rgba(2, 2, 2, 0.2);
+    position: fixed;
+    right: -350px;
+    top: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    transition: right 0.3s ease;
+    z-index: 1000; 
+}
+
+.sidebar-open .sidebar {
+    right: 0; 
+}
+
+.sidebar-open .dashboard-content {
+    margin-right: 350px; 
+}
+
+.sidebar-close-btn {
+    background: none;
+    border: none;
+    cursor: pointer;
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    z-index: 10;
+}
+
+.sidebar-close-btn img {
+    width: 40px;
+    height: 40px;
+    filter: invert(1) brightness(2);
+}
+
+.sidebar .logo {
+    width: 24px;
+    height: 24px;
+    margin-right: 15px;
+    vertical-align: middle;
+    filter: invert(1) brightness(2);
+}
+
+.sidebar ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    margin-top: 60px;
+}
+
+.sidebar ul li {
+    padding: 12px 20px;
+    margin-bottom: 10px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 18px;
+    display: flex;
+    align-items: center;
+    transition: background-color 0.3s, transform 0.3s, padding-left 0.3s;
+}
+
+.sidebar ul li:hover {
+    background-color: #071c3f;
+    transform: scale(1.05);
+    padding-left: 30px;
+}
+
+.content {
+    flex-grow: 1;
+    box-sizing: border-box;
+}
+
+.welcome-dashboard {
+    text-align: center;
+    padding: 10px;
+}
+
+.welcome-text {
+    font-size: 2rem;
+    font-weight: 600;
+    color: #023f57;
+    font-family: 'Pacifico', cursive;
+}
+
+.user-name {
+    text-transform: uppercase;
+    font-size: 2rem;
+    font-weight: bold;
+    color: #023f57;
+    font-family: 'Playfair Display', serif;
+}
+
+.welcome-dashboard h1 {
+    font-size: 30px;
+    color: #034e6c;
+}
+
+.welcome-dashboard p {
+    font-size: 18px;
+    color: #012837;
+    margin-top: 10px;
+}
+
+.app-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    padding: 10px;
+}
+
+.app-tile {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    flex: 1 1 calc(33.333% - 20px);
+    background: linear-gradient(100deg, #02629f, #e5e5e6);
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: box-shadow 0.3s, transform 0.3s;
+    min-width: 220px;
+    text-align: center;
+}
+
+.app-icon {
+    width: 70px;
+    height: 70px;
+    margin-bottom: 15px;
+    filter: invert(1) brightness(2);
+}
+
+.app-tile h3 {
+    font-size: 20px;
+    color: #04243a;
+    margin-bottom: 12px;
+}
+
+.app-tile:hover {
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    transform: translateY(-5px);
+}

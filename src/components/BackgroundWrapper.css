@@ -1,0 +1,22 @@
+.background-wrapper {
+    height: 100%;
+    min-height: 100vh;
+    background: linear-gradient(135deg, #fdfcfb, #e2d1c3, #c2d6d1, #f1e6da);
+    background-size: 400% 400%;
+    animation: gradientBG 15s ease infinite;
+    font-family: 'Inter', sans-serif;
+    box-sizing: border-box;
+  }
+  
+  @keyframes gradientBG {
+    0% {
+      background-position: 0% 50%;
+    }
+    50% {
+      background-position: 100% 50%;
+    }
+    100% {
+      background-position: 0% 50%;
+    }
+  }
+  

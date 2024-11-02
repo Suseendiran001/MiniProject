@@ -1,0 +1,187 @@
+/* AcademicCalendarPage.css */
+
+.academic-calendar-page {
+  padding: 30px;
+  font-family: 'Inter', sans-serif;
+  box-sizing: border-box;
+}
+
+.academic-calendar-page h1 {
+  text-align: center;
+  font-size: 2.8rem;
+  margin-bottom: 30px;
+  color: #033f6c;
+}
+
+.academic-calendar-page h2 {
+  text-align: center;
+  font-size: 2rem;
+  color: #033f6c;
+  margin-bottom: 20px;
+}
+
+.calendar-table {
+  width: 100%;
+  max-width: 1000px;
+  margin: 0 auto;
+  border-collapse: collapse;
+  background-color: #ffffff; 
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 4px 8px rgba(181, 182, 183, 0.5);
+}
+
+.calendar-table th, .calendar-table td {
+  padding: 15px;
+  text-align: left;
+  border-bottom: 1px solid #ddd;
+  font-size: 1rem;
+  position: relative;
+}
+
+.calendar-table th {
+  background-color: #122f60;
+  color: white;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
+}
+
+/* Adjust column widths */
+
+.calendar-table th:first-child,
+.calendar-table td:first-child {
+  width: 10%; 
+}
+
+.calendar-table th:nth-child(2),
+.calendar-table td:nth-child(2) {
+  width: 15%; 
+}
+
+.calendar-table th:nth-child(3),
+.calendar-table td:nth-child(3) {
+  width: 55%; 
+}
+
+.calendar-table td input[type="date"], 
+.calendar-table td select, 
+.calendar-table td input[type="text"] {
+  width: 100%;
+  padding: 8px;
+  border-radius: 8px;
+  border: 1px solid #ddd;
+  font-size: 1rem;
+  box-sizing: border-box;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  transition: box-shadow 0.3s ease;
+}
+
+.calendar-table td input[type="date"]:focus,
+.calendar-table td select:focus,
+.calendar-table td input[type="text"]:focus {
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+  outline: none;
+}
+
+
+/* Highlight alternating rows */
+.calendar-table tr:nth-child(odd) {
+  background-color: white;
+}
+
+.calendar-table tr:nth-child(even) {
+  background-color: #eff7fb;
+}
+
+/* Colored status indicators */
+.calendar-table td::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  width: 1.5px;
+  background-color: #122f60;
+}
+
+/* Highlight rows based on type */
+.calendar-table tr.holiday td {
+  background-color: #f3d2d5; 
+}
+
+
+.add-entry-button {
+  display: block;
+  width: 100%;
+  max-width: 1000px;
+  padding: 15px;
+  margin: 20px auto 0;
+  background: linear-gradient(100deg, #02629f, #e5e5e6);
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 1.2rem;
+  cursor: pointer;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  transition: box-shadow 0.3s ease, transform 0.3s ease;
+}
+
+.add-entry-button:hover {
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.2);
+  transform: translateY(-2px);
+}
+
+.remove-entry-button {
+  padding: 8px 14px;
+  background: linear-gradient(135deg, #bc0f20, #970d1a);
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 1rem;
+  cursor: pointer;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  transition: box-shadow 0.3s ease, transform 0.3s ease;
+}
+
+.remove-entry-button:hover {
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.2);
+  transform: translateY(-2px);
+}
+
+/* Style for the file upload input */
+
+.file-upload-container {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+.file-upload-label {
+  display: inline-block;
+  padding: 15px 25px;
+  background: linear-gradient(135deg, #1c9839, #0d7824);
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 1.2rem;
+  cursor: pointer;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  transition: box-shadow 0.3s ease, transform 0.3s ease;
+}
+
+.file-upload-label:hover {
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.2);
+  transform: translateY(-2px);
+}
+
+.file-upload-input {
+  display: none;
+}
+
+.file-upload-text {
+  margin-left: 10px;
+  font-size: 1rem;
+  color: #333;
+}

@@ -1,0 +1,176 @@
+/* GradesPage.css */
+.grades-page {
+  margin-left: 70px;
+  margin-right: 70px;
+  padding: 20px;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  animation: fadeIn 0.5s ease-in-out;
+}
+
+.grades-page h1 {
+  font-size: 2.8rem;
+  color: #333;
+  margin-bottom: 20px;
+  letter-spacing: 1.2px;
+  animation: slideDown 0.7s ease-in-out;
+}
+
+.grades-subjects-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  margin-bottom: 30px;
+}
+
+.grades-subject-tile {
+  background-color: #ffffff;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 1.5rem;
+  border-radius: 15px;
+  border-top: 2px solid #1c4791;
+  border-bottom:2px solid #1c4791;
+  border-right: 2px solid #1c4791;
+  border-left: 10px solid #1c4791;
+  cursor: pointer;
+  transition: transform 0.3s ease, background-color 0.3s ease;
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #122f60;
+}
+
+.grades-subject-tile:hover {
+  transform: translateY(-5px);
+  background-color: #1c4791;
+  color: whitesmoke;
+}
+
+.grades-subject-tile.selected {
+  background-color: #1c4791;
+  color: whitesmoke;
+}
+
+.grades-content {
+  width: 100%;
+  max-width: 1200px;
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  animation: slideUp 0.5s ease-in-out;
+}
+
+.grades-content h2 {
+  font-size: 1.8rem;
+  margin-bottom: 20px;
+  color: #122f60;
+}
+
+.grades-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 20px;
+}
+
+.grades-table th, .grades-table td {
+  padding: 15px;
+  text-align: left;
+  border-bottom: 1px solid #ddd;
+  font-size: 1rem;
+}
+
+.grades-table th {
+  background-color: #122f60;
+  color: whitesmoke;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+
+.grades-table tr:nth-child(even) {
+  background-color: #f9f9f9;
+}
+
+.grades-table tr:hover {
+  background-color: #f1f1f1;
+  transition: background-color 0.3s ease;
+}
+
+.teacher-marks input[type="number"] {
+  width: 60px;
+  padding: 5px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  transition: border-color 0.3s ease;
+}
+
+.teacher-marks input[type="number"]:focus {
+  border-color: #122f60;
+  outline: none;
+}
+
+.teacher-marks button {
+  background-color: #044787;
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.teacher-marks button:hover {
+  background-color: #059766;
+}
+
+.grades-chart {
+  display: flex;
+  justify-content: space-evenly;
+  margin-top: 50px;
+}
+
+.grades-chart h3 {
+  font-size: 18px;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.bar-container,
+.pie-container {
+  display: flex;
+  flex-direction: column;
+  width: 50%;
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes slideDown {
+  from {
+    transform: translateY(-20px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes slideUp {
+  from {
+    transform: translateY(20px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}

@@ -1,0 +1,207 @@
+.student-view-container {
+  max-width: 1200px;
+  padding: 20px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: #333;
+  margin-left: 70px; 
+  margin-right: 70px;
+  animation: fadeIn 0.5s ease-in-out;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.student-view-title {
+  font-size: 2.8rem;
+  color: #122f60;
+  text-align: center;
+  margin-bottom: 2rem;
+  position: relative;
+}
+
+.student-view-subject-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 1.5rem;
+  margin-bottom: 2rem;
+}
+
+.student-view-subject-tile {
+  background: white;
+  border-radius: 18px;
+  padding: 1.5rem;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.8);
+  cursor: pointer;
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+  border-left: 8px solid #1c4791;
+  border-right: 8px solid #1c4791;
+}
+
+.student-view-subject-tile:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.8);
+}
+
+.student-view-subject-tile:hover::before {
+  transform: scaleX(1);
+}
+
+.student-view-subject-tile h3 {
+  color: #122f60;
+  margin-bottom: 0.75rem;
+  font-size: 30px;
+  text-align: center;
+}
+
+.student-view-subject-tile p {
+  color: #01122f;
+  font-size: 1rem;
+  text-align: center;
+}
+
+.student-view-content-wrapper {
+  display: flex;
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+.student-view-sidebar {
+  flex: 0 0 350px;
+  background: white;
+  border-radius: 18px;
+  border-top: 8px solid #122f60;
+  border-right: 8px solid #122f60;
+  border-left: 2px solid #122f60;
+  padding: 1.5rem;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.8);
+}
+
+.student-view-sidebar h2 {
+  color: #122f60;
+  font-size: 30px;
+}
+
+.student-view-main-content {
+  flex: 1;
+  background: white;
+  border-radius: 18px;
+  border-top: 8px solid #122f60;
+  border-right: 2px solid #122f60;
+  border-left: 8px solid #122f60;
+  padding: 2rem;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.8);
+}
+
+.student-view-units,
+.student-view-sections {
+  margin-top: 1.5rem;
+}
+
+.student-view-unit,
+.student-view-section {
+  padding: 1rem;
+  margin-bottom: 1rem;
+  border-radius: 18px;
+  border-right: 5px solid #122f60;
+  background: linear-gradient(100deg, #02629f, #d7d7d8 );
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.student-view-unit:hover,
+.student-view-section:hover,
+.student-view-unit.active,
+.student-view-section.active {
+  background: linear-gradient(100deg, #013758, #02629f );
+  transform: translateX(5px);
+}
+
+.student-view-unit:hover h3,
+.student-view-section:hover h4 {
+  color: whitesmoke; 
+}
+
+.student-view-sections h3 {
+  color: #122f60;
+  font-size: 25px;
+  text-align: center;
+}
+
+.student-view-unit h3,
+.student-view-section h4 {
+  color: whitesmoke;
+  margin: 0;
+  font-size: 15px;
+}
+
+.student-view-section-content h2 {
+  color: #122f60;
+  margin-bottom: 1.5rem;
+  font-size: 25px;
+}
+
+.student-view-section-content p {
+  line-height: 1.5;
+  color: black;
+  margin-bottom: 25px;
+  font-size: 18px;
+
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+  word-break: break-all;
+}
+
+.student-view-section-content h3 {
+  color: #122f60;
+  margin: 1.5rem 0 1rem;
+  font-size: 25px;
+}
+
+.student-view-section-content ul {
+  list-style: none;
+  padding: 0;
+}
+
+.student-view-section-content li {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.75rem;
+  background: #f5f6fa;
+  margin-bottom: 0.5rem;
+  border-radius: 6px;
+  transition: background 0.3s ease;
+}
+
+.student-view-section-content li:hover {
+  background: #d7dff3;
+}
+
+.student-view-section-content button {
+  background: #024c97;
+  color: white;
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.student-view-section-content button:hover {
+  background: #122f60;
+  transform: translateY(-2px);
+  box-shadow: 0 2px 5px rgba(40, 53, 147, 0.3);
+}
+
+.student-view-placeholder {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  color: #90a4ae;
+  font-style: italic;
+}
