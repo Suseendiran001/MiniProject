@@ -1,6 +1,6 @@
 // App.jsx
 import React, { useState } from 'react';
-import axios from 'axios';
+// import axios from 'axios';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import { UserProvider } from './UserContext';
 import HomePage from './components/HomePage';
@@ -14,8 +14,9 @@ import CoursePage from './components/CoursePage';
 import AssignmentPage from './components/AssignmentPage';
 import GradesPage from './components/GradesPage'; 
 import { Toaster } from 'react-hot-toast';
+// import api from './config/axios';
 
-axios.defaults.baseURL = 'http://localhost:5000';
+// axios.defaults.baseURL = 'http://localhost:5000';
 
 function App() {
   return (
