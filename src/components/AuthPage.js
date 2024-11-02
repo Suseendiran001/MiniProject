@@ -4,6 +4,7 @@ import axios from 'axios';
 import './AuthPage.css';
 import logo from '../assets/images/Logo.png';
 import { UserContext } from '../UserContext'; 
+import api from '../config/axios';
 
 const API_BASE_URL = 'http://localhost:5000';
 
@@ -32,7 +33,7 @@ const AuthPage = () => {
 
     try {
       const endpoint = isSignUp ? `${API_BASE_URL}/api/auth/signup` : `${API_BASE_URL}/api/auth/login`;
-      const response = await axios.post(endpoint, {
+      const response = await api.post(endpoint, {
         email,
         password,
         role,
